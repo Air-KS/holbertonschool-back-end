@@ -19,7 +19,7 @@ def print_todo_progress(employee_id):
     done_tasks = [task for task in todos_data if task["completed"]]
 
     # Afficher les informations
-    print("Employee {} is done with tasks {}/{}".format
+    print("Employee {} is done with tasks {}/{}:".format
           (user_data["name"], len(done_tasks), len(todos_data)))
     for task in done_tasks:
         print("\t {}".format(task["title"]))
@@ -27,6 +27,6 @@ def print_todo_progress(employee_id):
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("ID employed")
+        print("Veuillez fournir un ID d'employé.")
     else:
         print_todo_progress(int(sys.argv[1]))
